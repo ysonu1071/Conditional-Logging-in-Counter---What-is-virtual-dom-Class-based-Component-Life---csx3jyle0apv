@@ -12,6 +12,13 @@ class App extends React.Component{
     this.handleClick = this.handleClick.bind(this)
   }
 
+  shouldComponentUpdate(){
+    if(this.state.count % 2 != 0) {
+      return true;
+    }else{
+      return false;
+    }
+  }
 
   render(){
     console.log(`Rendering with count:-${this.state.count}`)
